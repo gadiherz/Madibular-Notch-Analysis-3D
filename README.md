@@ -17,6 +17,7 @@ Folder structure
     Rak_Line_Extraction_WF.m         Main interactive script: load model, orient, segment, extract.
     RamLineWF.m                      Computes curve-based descriptors from extracted curves.
     run_workflow_interactive.m       Convenience wrapper that runs the two scripts above.
+    run_batch_export_excel.m         Comprehensive batch wrapper with an excel output of variables
 - src/
     Core functions used by the workflow (curvature estimation, ridge tracing, curve processing).
 - apps/
@@ -26,13 +27,14 @@ Folder structure
     EXPECTED_INTERACTION_FLOW.md     Step-by-step description of user prompts/choices.
     PIPELINE_OVERVIEW.md             High-level call graph and data-flow notes.
     DEPENDENCIES.md                  MATLAB/toolbox and runtime assumptions.
+    Parameter_Registry.md            Full description of parameters and thresholds 
 
 Quick start
 1) Open MATLAB and set the current folder to this repository root.
 2) Run:
      startup
    and then:
-     run_workflow_interactive
+     run_batch_export_excel or run_workflow_interactive
 
 Inputs
 - The workflow expects a triangulated surface mesh (e.g., .ply/.stl/.obj).
